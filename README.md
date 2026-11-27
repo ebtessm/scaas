@@ -36,11 +36,11 @@ The proposal here is to build a national-cloud research and development platform
 
 ## مبدأ التكامل داخل SCaaS / The integration principle
 
-الخدمات المقترحة لا تُبنى كل واحدة منفصلة، بل تتكامل: مكوّن يُبنى مرة واحدة ويُفهرس في SCaaS، ثم تعيد استخدامه أكثر من خدمة. أمثلة على مكوّنات مشتركة مقترحة: الحسابات والصلاحيات، التنبيهات والإشعارات، التقارير وتحليل البيانات، وخدمات الذكاء الاصطناعي. الخدمتان التجريبيتان أدناه (السلامة على الطرق، وكويزورا) مثالان على ذلك: تنبيهات المخاطر في الأولى وتنبيهات المتابعة والتقارير في الثانية يمكن أن يشتركا في مكوّن واحد.
+الخدمات المقترحة لا تُبنى كل واحدة منفصلة، بل تتكامل: مكوّن يُبنى مرة واحدة ويُفهرس في SCaaS، ثم تعيد استخدامه أكثر من خدمة. أمثلة على مكوّنات مشتركة مقترحة: الحسابات والصلاحيات، التنبيهات والإشعارات، التقارير وتحليل البيانات، وخدمات الذكاء الاصطناعي. الخدمات التجريبية أدناه (السلامة على الطرق، كويزورا، المساعد القانوني، المكتبة الرقمية) أمثلة على ذلك: تنبيهات المخاطر في الأولى وتنبيهات المتابعة والتقارير في الثانية يمكن أن يشتركا في مكوّن واحد.
 
-هذا مبدأ تصميم مقترح. لم يُنفَّذ أي مكوّن مشترك بعد، والمشروعان الحاليان منفصلان تمامًا.
+هذا مبدأ تصميم مقترح. لم يُنفَّذ أي مكوّن مشترك بعد، والمشروعات الحالية منفصلة تمامًا.
 
-**English:** Services are not built in isolation. A component is built once, indexed in SCaaS and reused by several services (for example accounts and permissions, alerts and notifications, reporting and analytics, AI services). The two pilot services below are examples. This is a proposed design principle: no shared component exists yet and the two current projects are fully separate.
+**English:** Services are not built in isolation. A component is built once, indexed in SCaaS and reused by several services (for example accounts and permissions, alerts and notifications, reporting and analytics, AI services). The pilot services below are examples. This is a proposed design principle: no shared component exists yet and the projects are fully separate.
 
 ## خدمة تجريبية مقترحة: منصة السلامة على الطرق ونقل المواد الخطرة / Pilot service: road safety platform
 
@@ -91,6 +91,26 @@ The proposal here is to build a national-cloud research and development platform
 *Planned, not built:* publishing Quizora's parts (question generation, grading, reports) as reusable SCaaS components; hosting on a national cloud; child-safety controls (age-appropriate content review, no ads or tracking, minimal data, teacher and parent controls); learning paths and progress reports.
 
 *Honest status:* Quizora does not run on a national cloud, is not built from SCaaS components, and has no dedicated child-protection features yet. This section describes a proposed direction, not an existing service.
+
+## خدمتان تجريبيتان مقترحتان: مساعد قانوني ومكتبة رقمية / Pilot services: legal assistant and digital library
+
+**الفكرة:** مساعد دردشة عربي للأسئلة القانونية، ومكتبة رقمية للوثائق والتشريعات. تُقترحان كخدمتين تجريبيتين تشتركان مع غيرهما في مكوّنات SCaaS: فهرسة النصوص والبحث فيها، الحسابات والصلاحيات، التقارير، وخدمات الذكاء الاصطناعي.
+
+**ما هو موجود فعلًا اليوم (نماذج أولية، والكود غير منشور هنا):**
+
+- **المساعد القانوني:** نموذج أولي لدردشة عربية تجيب من قاعدة أسئلة وأجوبة مخزنة. دقة الإجابات لم تصل بعد إلى مستوى مقبول، ولا يصلح كمصدر للاستشارة القانونية.
+- **المكتبة الرقمية:** نموذج أولي لمكتبة وثائق بتصنيفات، ورفع من المشرف، وحسابات للمستخدمين، وبحث، وملخصات استخراجية بأرقام الصفحات.
+
+**ما هو مقترح ولم يُنفَّذ بعد:**
+
+- إجابات من الوثائق بنموذج ذكاء اصطناعي يعمل محليًا مع الإحالة إلى مصدر كل إجابة.
+- بحث يتحمل اختلاف الكتابة ويفهم المعنى.
+- نشر المكوّنات المشتركة عبر SCaaS بدل بنائها مرتين.
+- مراجعة قانونية بشرية للنصوص والأجوبة قبل أي استخدام فعلي.
+
+**ملاحظة صريحة:** المشروعان تجريبيان، لا يقدّمان استشارة قانونية، ولا يشتركان فعليًا في أي مكوّن حتى الآن.
+
+**English:** An Arabic legal Q&A chatbot and a digital document library are proposed as further pilot services sharing SCaaS components (text indexing and search, accounts and permissions, reporting, AI services). *Exists today (early prototypes, code not published here):* a chatbot that answers from stored Q&A records, with accuracy not yet adequate and not suitable as legal advice; a library with categories, admin upload, user accounts, search and extractive summaries with page numbers. *Planned, not built:* answers from documents with a locally run AI model and citations, tolerant and semantic search, shared SCaaS components, human legal review before any real use. *Honest status:* prototypes only, no legal advice, no shared component yet.
 
 ## What exists now / ما الموجود فعلًا
 
