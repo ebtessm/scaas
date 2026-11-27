@@ -34,6 +34,35 @@ SCaaS adds a "software components" service layer on top of IaaS, PaaS and SaaS t
 
 The proposal here is to build a national-cloud research and development platform around SCaaS, to localize and export AI applications. First reference application: the [road safety platform](https://github.com/ebtessm/egypt-road-safety-platform).
 
+## مبدأ التكامل داخل SCaaS / The integration principle
+
+الخدمات المقترحة لا تُبنى كل واحدة منفصلة، بل تتكامل: مكوّن يُبنى مرة واحدة ويُفهرس في SCaaS، ثم تعيد استخدامه أكثر من خدمة. أمثلة على مكوّنات مشتركة مقترحة: الحسابات والصلاحيات، التنبيهات والإشعارات، التقارير وتحليل البيانات، وخدمات الذكاء الاصطناعي. الخدمتان التجريبيتان أدناه (السلامة على الطرق، وكويزورا) مثالان على ذلك: تنبيهات المخاطر في الأولى وتنبيهات المتابعة والتقارير في الثانية يمكن أن يشتركا في مكوّن واحد.
+
+هذا مبدأ تصميم مقترح. لم يُنفَّذ أي مكوّن مشترك بعد، والمشروعان الحاليان منفصلان تمامًا.
+
+**English:** Services are not built in isolation. A component is built once, indexed in SCaaS and reused by several services (for example accounts and permissions, alerts and notifications, reporting and analytics, AI services). The two pilot services below are examples. This is a proposed design principle: no shared component exists yet and the two current projects are fully separate.
+
+## خدمة تجريبية مقترحة: منصة السلامة على الطرق ونقل المواد الخطرة / Pilot service: road safety platform
+
+**الفكرة:** [منصة السلامة على الطرق ونقل المواد الخطرة](https://github.com/ebtessm/egypt-road-safety-platform) ([عرض تجريبي](https://ebtessm.github.io/egypt-road-safety-platform/)) هي أول فكرة للمشروع، وجاءت بعد حادث الوراق. تُقترح كخدمة تجريبية ثانية على السحابة الوطنية، ويمكن نشر مكوناتها (تقييم المخاطر، التنبيهات) كمكوّنات قابلة لإعادة الاستخدام عبر SCaaS.
+
+**ما هو موجود فعلًا اليوم:**
+
+- مستودع مفتوح المصدر فيه الرؤية والبنية ونموذج البيانات وخطة المراحل.
+- نموذج أولي بسيط بلغة Python يحسب درجة الخطر ويولّد تنبيهات، مع اختبارات وبيانات تجريبية مصنوعة (ليست بيانات حقيقية).
+- صفحة عرض تجريبي على GitHub Pages.
+
+**ما هو مقترح ولم يُنفَّذ بعد:**
+
+- ربط الجهات المعنية (المرور، الإسعاف، الحماية المدنية، شركات النقل، الجهات الرقابية) في منصة واحدة.
+- تتبع لحظي حقيقي للناقلات عبر أجهزة GPS.
+- نشر مكوّناتها عبر SCaaS واستضافتها على سحابة وطنية.
+- مراجعة الأوزان والحدود من خبراء السلامة والجهات المختصة قبل أي استخدام فعلي.
+
+**ملاحظة صريحة:** لا يوجد تتبع حقيقي ولا ربط بأي جهة، والنموذج الأولي لإثبات الفكرة فقط، وليس مشروعًا حكوميًا رسميًا.
+
+**English:** The [road safety and hazardous-materials transport platform](https://github.com/ebtessm/egypt-road-safety-platform) (first idea, prompted by the Warraq crash) is proposed as a second pilot service. *Exists today:* open-source repo with vision, architecture, data model and roadmap; a small Python risk-scoring and alert prototype with tests and synthetic sample data; a demo page. *Planned, not built:* linking the agencies on one platform, real-time GPS tracking, publishing its parts as SCaaS components, national-cloud hosting, expert review of the risk weights. *Honest status:* no real tracking and no agency integration yet; prototype for the idea only, not an official government project.
+
 ## كويزورا: خدمة تجريبية مقترحة ضمن SCaaS / Quizora as a pilot service
 
 **الفكرة:** [تحدي كويزورا (Quizora)](https://ebtessm.github.io/quiz/) منصة اختبارات وتدريب تفاعلية، تُقترح كأول **خدمة تجريبية** يمكن أن تنبثق من السحابة الوطنية وSCaaS، بهدف حماية أبنائنا وتنمية العقول والمهارات التعليمية.
