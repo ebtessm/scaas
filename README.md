@@ -4,7 +4,7 @@
 > **Status / الحالة:** research idea and starting point. No working cloud service or code yet. Not an official government project.
 > فكرة بحثية ونقطة بداية. لا توجد خدمة سحابية عاملة ولا كود تشغيلي حتى الآن. وليس مشروعًا حكوميًا رسميًا.
 
-![SCaaS diagram](scaas-diagram.png)
+![SCaaS diagram](scaas-diagram.svg)
 
 ## الفكرة (عربي)
 
